@@ -1,2 +1,0 @@
-# simplik-web
-mi project
