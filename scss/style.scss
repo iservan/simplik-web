@@ -1,4 +1,29 @@
-// body { cursor: ns-resize }
+/* Ken burns effect
+========================================== */
+.imageWrapper {
+  width:1200px;
+  height:700px;
+  margin:0 auto;
+  overflow:hidden;
+  position: relative;
+  img {
+    animation:move 15s ease infinite;
+    position: absolute;
+  }
+}
+
+@-webkit-keyframes move {
+  from,to {
+  	transform: scale(1);
+  }
+  60% {
+  	transform: scale(1.2);
+  }
+}
+
+/* Slides 
+========================================== */
+// First slide - Intro
 .intro-section {
   text-align: center;
   min-height: 70vh;
@@ -8,6 +33,13 @@
   justify-content: center;
 }
 
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+}
+
+// Generic styles
 .content-section {
   --scroll-length: 1.8;
   height: calc( var(--scroll-length) * 100vh );
