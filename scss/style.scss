@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:500,900|Questrial');
 
+$main-color: #ffd32a;
+$accent-color: #3867d6;
+$heading-font: 'Questrial', sans-serif;
+$body-font: 'Noto Sans JP', sans-serif;
+
 body{
   font-weight: 500;
   color:#626262;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: $body-font;
   font-size: 16px;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale
@@ -73,41 +78,52 @@ figure {
 
 .content {
   position: absolute;
-  top: -10em;
+  top: 25%;
   left: 0;
-  padding-left: 2em;
   width: 100%;
-  height: 150%;
-  max-width: 45em;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  max-width: 42em;
   color: white;
-  padding: 2em;
+  padding: 2em 2em 2em 3em;
   font-size: 2.9vmin;
-
   * {
-    text-shadow: 0 0 4vmin rgba(black, 0.25);
+    text-shadow: 0 0 4vmin rgba(black, 0.35);
   }
-
-  > header {
-    grid-row: 1 / 2;
+  p {
+    line-height: 1.5;
+  }
+  /*> header {
+    grid-row: 1 / 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-  }
-
-  > .paragraph {
-    grid-row: 2 / 3;
-    line-height: 1.5;
+  }*/
+  > .text-block {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    > .paragraph {
+      grid-row: 1 / 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .heading.small {
+      color: var(--main-color);
+      color: $main-color;
+      grid-row: 2;
+      font-size: 1.5em;
+      font-weight: 400;
+      font-family: $body-font;
+    }
   }
 } 
 
 /* Generic styles - Text effect
 ------------------------------- */
 .heading {
-  font-size: 2.75em;
   margin: 0;
-  font-family: 'Questrial', sans-serif;
+  font-size: 2.55em;
+  font-family: $heading-font;
 }
 
 .subheading {
